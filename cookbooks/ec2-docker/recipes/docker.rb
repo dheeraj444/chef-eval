@@ -6,7 +6,7 @@ docker_image 'jenkins' do
   action :pull
 end
 
-docker_container 'jenkins server' do
+docker_container 'jenkins_server' do
   repo 'jenkins'
   port '8080:8080'
 end
