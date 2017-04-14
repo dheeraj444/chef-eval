@@ -17,3 +17,12 @@ search("users", "*:*").each do |user_data|
   end
 end
 
+search("groups", "*:*").each do |group_data|
+  user group_data["id"] do
+    comment group_data["comment"]
+    uid group_data["uid"]
+    gid group_data["gid"]
+    home group_data["home"]
+    shell group_data["shell"]
+  end
+end
